@@ -1,4 +1,6 @@
 # Kafka service
+
+## Starting kafka 
 To start Kafka, here is the list of the command you need to run in your commad line:
 
 To start the zookeeper, run the following commands:
@@ -18,3 +20,4 @@ start bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 -
 
 start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1
 ````
+![image](https://user-images.githubusercontent.com/84817425/212467064-0edf5b0c-4ff7-4a3e-bbea-64df3538bbff.png)
