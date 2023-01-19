@@ -154,6 +154,7 @@ This resulted in :
  
 ![image](https://user-images.githubusercontent.com/84817425/213541389-cc3b9693-1edc-4a2c-baab-313e95a125ea.png)
 
+---
  **6- Create an html file to display Stream Data Analytics results in real time**:
  To do so, I installed smoothie.js:
  ```shell
