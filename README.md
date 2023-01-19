@@ -26,7 +26,7 @@ start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topi
 
 ## Manipulating kafka and spring cloud streams:
 1. Create a kafka producer via a Rest Controller
-````
+````Java
  @Autowired
     private StreamBridge streamBridge;
     @GetMapping("/publish/{topic}/{name}")
@@ -40,4 +40,5 @@ start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topi
 To test this, type: <http://localhost:8080/publish/R1/test> on your browser to send a pageEvent object to the topic **`R1`**
 This will result in the following:
     **On your browser:**
+    
 ![img.png](img.png)
