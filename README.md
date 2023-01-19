@@ -81,6 +81,11 @@ This will result in the following:
 ```
 This method defines a Spring Framework Bean named "pageEventSupplier" that returns a Supplier<PageEvent> object. The supplier, when invoked, creates and returns a new PageEvent object with randomly generated values for its parameters: pageName, userName, date, and randomNumber. The pageName and userName are randomly determined to be either "P1" or "P2" and "U1" or "U2" respectively. The date is set to the current date when the PageEvent object is created, and the random number is generated using the nextInt() method of the Random class with a maximum value of 9000.
 
- - 
+- In **`application.properties`**, add the following configuration that sets the destination for receiving messages:
+```
+spring.cloud.stream.bindings.pageEventSupplier-out-0.destination=R2
+```
+Once the application is running, this method is invoked, which means opening a kafka consumer fo the topic **`R2`** will result in:
+![img_3.png](img_3.png)
  
  
