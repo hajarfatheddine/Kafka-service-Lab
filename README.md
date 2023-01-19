@@ -27,7 +27,7 @@ start bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topi
 ## Manipulating kafka and spring cloud streams:
 1. Create a kafka producer via a Rest Controller:
 After creating the **`PageEventRestController.java`**, add the following code:
-```
+```Java
  @Autowired
     private StreamBridge streamBridge;
     @GetMapping("/publish/{topic}/{name}")
@@ -51,7 +51,8 @@ This will result in the following:
 
 2. Create a kafka consumer service:
 After creating **`PageEvenytService.java`**, add the following code:
-```
+
+```Java
 @Bean
     public Consumer<PageEvent> pageEventConsumer(){
         return (input)->{
@@ -68,7 +69,8 @@ This will result in the following:
 
 3. Create a kafka supplier service:
 - In **`PageEvenytService.java`**, add the following code:
-```
+
+```Java
 @Bean
     public Supplier<PageEvent> pageEventSupplier(){
         return()-> new PageEvent(Math.random()>0.5?"P1":"P2",
@@ -78,5 +80,7 @@ This will result in the following:
     }
 ```
 This method defines a Spring Framework Bean named "pageEventSupplier" that returns a Supplier<PageEvent> object. The supplier, when invoked, creates and returns a new PageEvent object with randomly generated values for its parameters: pageName, userName, date, and randomNumber. The pageName and userName are randomly determined to be either "P1" or "P2" and "U1" or "U2" respectively. The date is set to the current date when the PageEvent object is created, and the random number is generated using the nextInt() method of the Random class with a maximum value of 9000.
-- 
+
+ - 
+ 
  
